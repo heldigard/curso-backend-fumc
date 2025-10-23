@@ -9,7 +9,7 @@ mi_animal_favorito = "gato"  # Reto 1: Cambia "gato" por el nombre de tu animal 
 @router.get("/saludo")
 def saludo():
     """Reto 2: Endpoint de saludo personalizado. Cambia el mensaje a algo personal."""
-    return {"mensaje": "Hola, soy Madelin Ruiz Mejía"}
+    return {"mensaje": "Hola, soy Madelin Ruiz Mejía, la tralalerita"}
 
 @router.get("/numero_favorito")
 def numero_favorito():

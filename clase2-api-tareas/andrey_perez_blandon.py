@@ -3,18 +3,18 @@ from fastapi import APIRouter
 router = APIRouter(prefix="/andrey_perez_blandon")
 
 # Variable para usar en operaciones
-mi_edad = 20
-mi_animal_favorito = "gato"  # Reto 1: Cambia "gato" por el nombre de tu animal favorito (ej: "perro")
+mi_edad = 15
+mi_animal_favorito = "ornitorrinco"  # Reto 1: Cambia "gato" por el nombre de tu animal favorito (ej: "perro")
 
 @router.get("/saludo")
 def saludo():
     """Reto 2: Endpoint de saludo personalizado. Cambia el mensaje a algo personal."""
-    return {"mensaje": "Hola, soy Andrey Perez Blandon"}
+    return {"mensaje": "Wenos días amiguitos, soy yo, el tralalerito"}
 
 @router.get("/numero_favorito")
 def numero_favorito():
     """Reto 3: Devuelve tu número favorito. Cambia el número 7 por tu favorito."""
-    return {"numero": 7}
+    return {"numero": 8128}
 
 @router.get("/animal_favorito")
 def animal_favorito():

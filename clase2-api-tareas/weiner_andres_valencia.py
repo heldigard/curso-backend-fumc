@@ -14,7 +14,7 @@ def saludo():
 @router.get("/numero_favorito")
 def numero_favorito():
     """Reto 3: Devuelve tu número favorito. Cambia el número 7 por tu favorito."""
-    return {"numero": 0212}
+    return {"numero": 212}
 
 @router.get("/animal_favorito")
 def animal_favorito():

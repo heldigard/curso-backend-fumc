@@ -1,0 +1,44 @@
+{
+  // Activar automáticamente el entorno virtual en la terminal
+  "python.terminal.activateEnvironment": true,
+
+  // Activación automática del entorno virtual en CMD
+  "python.terminal.activateEnvInCurrentTerminal": true,
+
+  // ==========================================
+  // CONFIGURACIÓN DEL EDITOR
+  // ==========================================
+
+  // Formatear al guardar
+  "editor.formatOnSave": true,
+
+  // Regla de ancho de línea (PEP 8)
+  "editor.rulers": [88],
+
+  // ==========================================
+  // ARCHIVOS Y CARPETAS A OCULTAR
+  // ==========================================
+
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.pytest_cache": true
+  },
+
+  // ==========================================
+  // CONFIGURACIÓN ESPECÍFICA DE PYTHON
+  // ==========================================
+
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+
+  // Configuración de Pylance para desactivar advertencias específicas
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportUntypedFunctionDecorator": "none",
+    "reportUnknownMemberType": "none",
+    "reportUnknownVariableType": "none"
+  }
+}

@@ -11,7 +11,8 @@
       "env": {
         "PYTHONPATH": "${workspaceFolder}"
       },
-      "console": "integratedTerminal"
+      "console": "integratedTerminal",
+      "preLaunchTask": "install-dependencies"
     }
   ]
 }

@@ -49,3 +49,16 @@ def es_par(num: int = 0):
 # 2. La función debe recibir num1: int = 0, num2: int = 0
 # 3. Devuelve {"producto": num1 * num2}
 # Ejemplo: /multiplica?num1=3&num2=4 debería devolver {"producto": 12}
+# Solución desafío 4
+
+@router.get("/suma/{c}/{d}")
+def suma(c: int, d: int):
+    "Devuelve la suma de dos números recibidos en la ruta."
+    return {"suma": c + d} 
+
+# Solución desafío 5
+@router.get("/multiplica/{num1}/{num2}")
+def multiplica(num1: int = 0, num2: int = 0):
+    "Devuelve el producto de dos números recibidos como query params."
+    return {"producto": num1 * num2}    
+

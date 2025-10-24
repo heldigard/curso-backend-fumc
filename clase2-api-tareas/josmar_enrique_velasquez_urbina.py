@@ -3,13 +3,13 @@ from fastapi import APIRouter
 router = APIRouter(prefix="/josmar_enrique_velasquez_urbina")
 
 # Variable para usar en operaciones
-mi_edad = 20
+mi_edad = 46
 mi_animal_favorito = "gato"  # Reto 1: Cambia "gato" por el nombre de tu animal favorito (ej: "perro")
 
 @router.get("/saludo")
 def saludo():
     """Reto 2: Endpoint de saludo personalizado. Cambia el mensaje a algo personal."""
-    return {"mensaje": "Hola, soy Josmar Enrique Velasquez Urbina"}
+    return {"mensaje": "Hola, doa elizondo"}
 
 @router.get("/numero_favorito")
 def numero_favorito():
@@ -26,7 +26,7 @@ def edad_en_5_anos():
     """Devuelve la edad en 5 años usando la variable mi_edad."""
     return {"edad_futura": mi_edad + 5}
 
-@router.get("/doble/{numero}")
+@router.get("/doble/{2}")
 def doble(numero: int):
     """Ejemplo: Endpoint que recibe un número en la ruta y devuelve su doble."""
     return {"doble": numero * 2}

@@ -3,18 +3,18 @@ from fastapi import APIRouter
 router = APIRouter(prefix="/katherin_julieth_henao_perez")
 
 # Variable para usar en operaciones
-mi_edad = 20
-mi_animal_favorito = "gato"  # Reto 1: Cambia "gato" por el nombre de tu animal favorito (ej: "perro")
+mi_edad = 32
+mi_animal_favorito = "Jaguar"  # Reto 1: Cambia "gato" por el nombre de tu animal favorito (ej: "perro")
 
 @router.get("/saludo")
 def saludo():
     """Reto 2: Endpoint de saludo personalizado. Cambia el mensaje a algo personal."""
-    return {"mensaje": "Hola, soy Katherin Julieth Henao Pérez"}
+    return {"mensaje": "Hola, soy Kathe Henao :) Bienvenidos a este espacio que no tiene diseño... aún XD"}
 
 @router.get("/numero_favorito")
 def numero_favorito():
     """Reto 3: Devuelve tu número favorito. Cambia el número 7 por tu favorito."""
-    return {"numero": 7}
+    return {"numero": 727}
 
 @router.get("/animal_favorito")
 def animal_favorito():
@@ -35,6 +35,20 @@ def doble(numero: int):
 def es_par(num: int = 0):
     """Ejemplo: Endpoint que recibe un número como query param y dice si es par."""
     return {"es_par": num % 2 == 0}
+
+@router.get("/suma/{a}/{b}")
+def sumar_con_ruta(a: int, b: int):
+    """
+    Endpoint que recibe dos números como parte de la ruta y devuelve su suma.
+    """
+    return {"suma": a + b}
+
+@router.get("/multiplica/{num1}/{num2}")
+def multiplicar_con_ruta(num1: int = 0, num2: int = 0):
+    """
+    Endpoint que recibe dos números como parte de la ruta y devuelve su multiplicación.
+    """
+    return {"producto": num1 * num2}
 
 # Desafío 4: Crea un endpoint /suma/{a}/{b} que reciba dos números en la ruta y devuelva su suma
 # Para crear este endpoint:

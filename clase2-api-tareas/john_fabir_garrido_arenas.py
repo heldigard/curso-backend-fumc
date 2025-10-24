@@ -56,3 +56,11 @@ router = APIRouter()
 @router.get("/suma/{a}/{b}")
 def sumar(a: int, b: int):
     return {"suma": a + b}
+
+from fastapi import APIRouter
+
+router = APIRouter()
+
+@router.get("/multiplica")
+def multiplica(num1: int = 0, num2: int = 0):
+    return {"producto": num1 * num2}

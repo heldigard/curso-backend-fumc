@@ -3,13 +3,13 @@ from fastapi import APIRouter
 router = APIRouter(prefix="/edison_jaramillo_monsalve")
 
 # Variable para usar en operaciones
-mi_edad = 20
-mi_animal_favorito = "gato"  # Reto 1: Cambia "gato" por el nombre de tu animal favorito (ej: "perro")
+mi_edad = 33
+mi_animal_favorito = "perro"  # Reto 1: Cambia "gato" por el nombre de tu animal favorito (ej: "perro")
 
 @router.get("/saludo")
 def saludo():
     """Reto 2: Endpoint de saludo personalizado. Cambia el mensaje a algo personal."""
-    return {"mensaje": "Hola, soy Edison Jaramillo Monsalve"}
+    return {"mensaje": "Hola, soy Edison Jaramillo Monsalve, los quiero mucho nunca cambien!!"}
 
 @router.get("/numero_favorito")
 def numero_favorito():
@@ -49,3 +49,15 @@ def es_par(num: int = 0):
 # 2. La función debe recibir num1: int = 0, num2: int = 0
 # 3. Devuelve {"producto": num1 * num2}
 # Ejemplo: /multiplica?num1=3&num2=4 debería devolver {"producto": 12}
+
+@router.get(("/suma/{a}/{b}"))
+def suma      (a: int, b: int):
+    """Devuelve la suma de dos números recibidos en la ruta."""
+    return {"suma": a + b}  
+
+@router.get("/multiplica/{num1}/{num2}")
+def multiplica(num1:int, num2: int):
+    """Devuelve el producto de dos números recibidos en la ruta."""
+    return {"producto": num1 * num2}
+
+

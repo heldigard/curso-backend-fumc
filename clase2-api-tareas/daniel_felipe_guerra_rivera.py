@@ -3,18 +3,18 @@ from fastapi import APIRouter
 router = APIRouter(prefix="/daniel_felipe_guerra_rivera")
 
 # Variable para usar en operaciones
-mi_edad = 20
-mi_animal_favorito = "gato"  # Reto 1: Cambia "gato" por el nombre de tu animal favorito (ej: "perro")
+mi_edad = 32
+mi_animal_favorito = "aguila"  # Reto 1: Cambia "gato" por el nombre de tu animal favorito (ej: "perro")
 
 @router.get("/saludo")
 def saludo():
     """Reto 2: Endpoint de saludo personalizado. Cambia el mensaje a algo personal."""
-    return {"mensaje": "Hola, soy Daniel Felipe Guerra Rivera"}
+    return {"mensaje": "Hola, mi nombre es Daniel Guerra"}
 
 @router.get("/numero_favorito")
 def numero_favorito():
     """Reto 3: Devuelve tu número favorito. Cambia el número 7 por tu favorito."""
-    return {"numero": 7}
+    return {"numero": 8}
 
 @router.get("/animal_favorito")
 def animal_favorito():
@@ -42,10 +42,17 @@ def es_par(num: int = 0):
 # 2. La función debe recibir a: int, b: int
 # 3. Devuelve {"suma": a + b}
 # Ejemplo: /suma/3/4 debería devolver {"suma": 7}
-
+@router.get("/suma/{a}/{b}")
+def sumar(a: int, b: int):
+    """Recibe dos números en la ruta y devuelve su suma."""
+    return {"suma": a + b}
 # Desafío 5: Crea un endpoint /multiplica que reciba dos números como parámetros de query (num1 y num2) y devuelva su producto
 # Para crear este endpoint:
 # 1. Usa @router.get("/multiplica")
 # 2. La función debe recibir num1: int = 0, num2: int = 0
 # 3. Devuelve {"producto": num1 * num2}
 # Ejemplo: /multiplica?num1=3&num2=4 debería devolver {"producto": 12}
+@router.get("/multiplica")
+def multiplicar(num1: int = 0, num2: int = 0):
+    """Recibe dos números como parámetros de query y devuelve su producto."""
+    return {"producto": num1 * num2}

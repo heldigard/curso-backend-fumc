@@ -9,12 +9,12 @@ mi_animal_favorito = "ornitorrinco"  # Reto 1: Cambia "gato" por el nombre de tu
 @router.get("/saludo")
 def saludo():
     """Reto 2: Endpoint de saludo personalizado. Cambia el mensaje a algo personal."""
-    return {"mensaje": "Wenos días amiguitos, soy yo, el tralalerito"}
+    return {"mensaje": "Wenos días amiguitos, soy yo, el tralalerito, yujuuu, qué haces consultando mi endpoint"}
 
 @router.get("/numero_favorito")
 def numero_favorito():
     """Reto 3: Devuelve tu número favorito. Cambia el número 7 por tu favorito."""
-    return {"numero": 8128}
+    return {"numero": 291293103913}
 
 @router.get("/animal_favorito")
 def animal_favorito():
@@ -43,9 +43,21 @@ def es_par(num: int = 0):
 # 3. Devuelve {"suma": a + b}
 # Ejemplo: /suma/3/4 debería devolver {"suma": 7}
 
+@router.get("/suma/{a}/{b}")
+def suma1 (a: int, b: int):
+    """Devuelve la suma de dos variables anteriormente insertadas en la URL o endpoint"""
+    resultado = a + b
+    return {resultado}
+
 # Desafío 5: Crea un endpoint /multiplica que reciba dos números como parámetros de query (num1 y num2) y devuelva su producto
 # Para crear este endpoint:
 # 1. Usa @router.get("/multiplica")
 # 2. La función debe recibir num1: int = 0, num2: int = 0
 # 3. Devuelve {"producto": num1 * num2}
 # Ejemplo: /multiplica?num1=3&num2=4 debería devolver {"producto": 12}
+
+@router.get("/multiplica")
+def multiplicacion (num1: int = 0, num2: int = 0):
+    """Devuelve la multiplicación de dos variables anteriormente insertadas en la URL o endpoint"""
+    producto = num1 * num2
+    return {"producto": producto}

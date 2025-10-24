@@ -14,7 +14,7 @@ def saludo():
 @router.get("/numero_favorito")
 def numero_favorito():
     """Reto 3: Devuelve tu número favorito. Cambia el número 7 por tu favorito."""
-    return {"numero": 212}
+    return {"numero": 98}
 
 @router.get("/animal_favorito")
 def animal_favorito():
@@ -43,9 +43,19 @@ def es_par(num: int = 0):
 # 3. Devuelve {"suma": a + b}
 # Ejemplo: /suma/3/4 debería devolver {"suma": 7}
 
+@router.get("/suma/{numero1}/{numero2}")
+def doble(numero1: int,numero2: int):
+    """Ejemplo: Endpoint que recibe un número en la ruta y devuelve su doble."""
+    return {"suma": numero1 + numero2}
+
 # Desafío 5: Crea un endpoint /multiplica que reciba dos números como parámetros de query (num1 y num2) y devuelva su producto
 # Para crear este endpoint:
 # 1. Usa @router.get("/multiplica")
 # 2. La función debe recibir num1: int = 0, num2: int = 0
 # 3. Devuelve {"producto": num1 * num2}
 # Ejemplo: /multiplica?num1=3&num2=4 debería devolver {"producto": 12}
+
+@router.get("/multiplicar/{numero1}/{numero2}")
+def doble(numero1: int,numero2: int):
+    """Ejemplo: multiplica."""
+    return {"suma": numero1 * numero2}

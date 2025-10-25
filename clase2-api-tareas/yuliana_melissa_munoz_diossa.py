@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-router = APIRouter(prefix="/yuliana_melissa_munoz_diosa")
+router = APIRouter(prefix="/yuliana_melissa_munoz_diossa")
 
 # Variable para usar en operaciones
 mi_edad = 20

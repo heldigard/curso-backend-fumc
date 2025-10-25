@@ -70,7 +70,7 @@ from .shirley_tatiana_torres_silva import router as shirley_tatiana_torres_silva
 from .sthefanny_gomez_jerez import router as sthefanny_gomez_jerez_router
 from .ubaldo_jose_meneses_pacheco import router as ubaldo_jose_meneses_pacheco_router
 from .weiner_andres_valencia import router as weiner_andres_valencia_router
-from .xiomara_xiomara_giraldo_ocampo import router as xiomara_xiomara_giraldo_ocampo_router
+from .xiomara_giraldo_ocampo import router as xiomara_xiomara_giraldo_ocampo_router
 from .yeniffer_elena_acosta_acosta import router as yeniffer_elena_acosta_acosta_router
 from .yorman_alexis_david_lopez import router as yorman_alexis_david_lopez_router
 from .yuliana_andrea_perez_tabares import router as yuliana_andrea_perez_tabares_router

@@ -4,7 +4,7 @@ router = APIRouter(prefix="/mayherlyn_lyset_salazar_echavarria")
 
 # Variable para usar en operaciones
 mi_edad = 36
-mi_animal_favorito = "loro"  # Reto 1: Cambia "gato" por el nombre de tu animal favorito (ej: "perro")
+mi_animal_favorito = "Loro"  # Reto 1: Cambia "gato" por el nombre de tu animal favorito (ej: "perro")
 
 @router.get("/saludo")
 def saludo():

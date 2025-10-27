@@ -36,6 +36,16 @@ def es_par(num: int = 0):
     """Ejemplo: Endpoint que recibe un número como query param y dice si es par."""
     return {"es_par": num % 2 == 0}
 
+@router.get("/suma/{a}/{b}")
+def suma(a:int, b:int):
+    "Endpoint que recibe dos números y devuelve su suma"
+    return {"suma": a+b}
+
+@router.get("/multiplica")
+def multiplica(num1: int = 0, num2: int = 0):
+    "Endpoint que reciba dos números como parámetros de query y devuelve el producto de la multiplicación"
+    return {"producto": num1 * num2}
+
 # Desafío 4: Crea un endpoint /suma/{a}/{b} que reciba dos números en la ruta y devuelva su suma
 # Para crear este endpoint:
 # 1. Usa @router.get("/suma/{a}/{b}")

@@ -43,7 +43,7 @@ def es_par(num: int = 0):
 # 3. Devuelve {"suma": a + b}
 # Ejemplo: /suma/3/4 debería devolver {"suma": 7}
 
-@router.get("/suma/{a}/{b}")
+@router.get("/suma/54+8")
 def suma(a: int, b: int):
     """Devuelve la suma de dos números recibidos en la ruta."""
     return {"suma": a + b}

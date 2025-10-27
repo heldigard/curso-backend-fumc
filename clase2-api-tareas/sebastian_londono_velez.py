@@ -31,7 +31,7 @@ def doble(numero: int):
     """Ejemplo: Endpoint que recibe un número en la ruta y devuelve su doble."""
     return {"doble": numero * 2}
 
-@router.get("/es_par")
+@router.get("/es_par?num=7")
 def es_par(num: int = 0):
     """Ejemplo: Endpoint que recibe un número como query param y dice si es par."""
     return {"es_par": num % 2 == 0}
@@ -43,7 +43,7 @@ def es_par(num: int = 0):
 # 3. Devuelve {"suma": a + b}
 # Ejemplo: /suma/3/4 debería devolver {"suma": 7}
 
-@router.get("/suma/54+8")
+@router.get("/suma/3/4")
 def suma(a: int, b: int):
     """Devuelve la suma de dos números recibidos en la ruta."""
     return {"suma": a + b}
@@ -55,7 +55,7 @@ def suma(a: int, b: int):
 # 3. Devuelve {"producto": num1 * num2}
 # Ejemplo: /multiplica?num1=3&num2=4 debería devolver {"producto": 12}
 
-@router.get("/multiplica")
+@router.get("/multiplica?num1=3&num2=5")
 def multiplica(num1: int = 0, num2: int = 0):
     """Devuelve el producto de dos números recibidos como parámetros de consulta."""
     return {"producto": num1 * num2}

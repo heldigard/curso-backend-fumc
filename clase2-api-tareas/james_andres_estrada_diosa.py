@@ -3,8 +3,8 @@ from fastapi import APIRouter
 router = APIRouter(prefix="/james_andres_estrada_diosa")
 
 # Variable para usar en operaciones
-mi_edad = 20
-mi_animal_favorito = "gato"  # Reto 1: Cambia "gato" por el nombre de tu animal favorito (ej: "perro")
+mi_edad = 39
+mi_animal_favorito = "Lobo"  # Reto 1: Cambia "gato" por el nombre de tu animal favorito (ej: "perro")
 
 @router.get("/saludo")
 def saludo():
@@ -14,7 +14,7 @@ def saludo():
 @router.get("/numero_favorito")
 def numero_favorito():
     """Reto 3: Devuelve tu número favorito. Cambia el número 7 por tu favorito."""
-    return {"numero": 7}
+    return {"numero": 13}
 
 @router.get("/animal_favorito")
 def animal_favorito():
